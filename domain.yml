@@ -94,6 +94,9 @@ responses:
   utter_ask_continue:
   - text: "Sorry i didnt quite catch that"
 
+actions:
+ - health_form
+
 forms:
 - health_form
 
