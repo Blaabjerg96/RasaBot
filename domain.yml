@@ -95,7 +95,8 @@ responses:
   - text: "Sorry i didnt quite catch that"
 
 actions:
- - health_form
+ - form{"name":"health_form"}
+ - form{"name":null}
 
 forms:
   - health_form
