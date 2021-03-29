@@ -1,0 +1,190 @@
+version: "2.0"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+
+- intent: goodbye
+  examples: |
+    - good afternoon
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+    - Yaaas queen
+    - Sure
+    - fine
+    - you bet
+    - kinda 
+    - sort of 
+    - sure did
+
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+    - nope
+    - I did not
+    - Nooooo
+    - absolutely not
+    - naah
+    - no thanks
+    - no i dont want to
+    - could have been better
+    - not great
+
+- intent: inform
+  examples : | 
+    - a full [8 hours] of (sleep)
+    - only four [hours] of (sleep)
+    - Did not [sleep] (sleep)
+    - [low] (stress)
+    - [medium] (stress)
+    - [high] (stress)
+    - I did do some [exercise](exercise)
+    - i did some [weightlifting](exercise)
+    - Yes, I went for a [run](exercise)
+    - uh huh an hour of [yoga](exercise)
+    - yep, I went for a [hike](exercise)
+    - Yes I took the dog for a [walk](exercise)
+    - Yeah, I played [tennis](exercise)
+    - I went [swimming](exercise)
+    - Took a [spin class](exercise)
+    - Did some [boxing](exercise)
+    - [rock climbing](exercise)
+    - played some [basketball](exercise)
+    - played [football](exercise)
+    - I did a [workout](exercise) video
+    - I want to get up early and go for a run
+    - Be more patient with my family
+    - Try to be a better friend
+    - Make sure to eat better tomorrow
+    - eat less junk food
+    - eat better
+    - spend less time on my phone
+    - don't procrastinate
+    - Go to bed earlier
+    - Don't stay up so late
+    - try to make some time to meditate
+    - i ate pretty healthy overall
+    - lots of fruits and vegetables
+    - I ate a salad
+    - too many snacks
+    - too many sweets
+    - too much junk food
+    - a lot of carbs
+    - too much fatty food
+    - Get more exercise
+
+- intent: out_of_scope
+  examples: | 
+    - Stop
+    - i dont want to do that
+    - adageagadadg
+    - qwertyyuawdca
+    - Tell me the weather
+    - go away
+    - i will not give my information to you
+    - None of your business
+    - stop asking
+    - nevermind
+    - go back
+    - I changed my mind
+
+- intent: mood_great
+  examples: |
+    - perfect
+    - great
+    - amazing
+    - feeling like a king
+    - wonderful
+    - I am feeling very good
+    - I am great
+    - I am amazing
+    - I am going to save the world
+    - super stoked
+    - extremely good
+    - so so perfect
+    - so good
+    - so perfect
+
+- intent: mood_unhappy
+  examples: |
+    - my day was horrible
+    - I am sad
+    - I don't feel very well
+    - I am disappointed
+    - super sad
+    - I'm so sad
+    - sad
+    - very sad
+    - unhappy
+    - not good
+    - not very good
+    - extremly sad
+    - so saad
+    - so sad
+
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+
+- intent: ask_stress
+  examples: |
+    - How do i lower my stress level? 
+    - What do i do to lower my stress?
+    - What can i do to lower stress in generel?
+    - Is exercise a good way to lower stress?
+    - What do i do if im stressed?
+
+- intent: ask_healthy
+  examples: |
+    - How do I get a healthy diet?
+    - What does a healthy diet contain?
+    - How many greens and vegetables such i eat?
+    - How do i keep eating healthy?
+    - What can i do to make it easier to eat healthy?
+
+- intent: ask_about_exercise
+  examples: |
+    - How much exercise should i do?
+    - How frequently should i do exercise?
+    - Is there a limit to how much exercise i should do?
+    - What kind of exercise should i do?
+    - How many times per week should i do exercise?

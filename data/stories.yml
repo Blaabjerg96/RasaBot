@@ -1,0 +1,106 @@
+version: "2.0"
+
+stories:
+
+- story: happy path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_great
+  - action: utter_happy
+
+- story: sad path 1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+- story: sad path 2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_goodbye
+
+- story: survey happy path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: affirm
+  - action: health_form
+  - active_loop: form{"name":"health_form"}
+  - active_loop: form{"name":null}
+  - action: utter_slots_values
+  - intent: goodbye
+  - action: utter_goodbye
+
+- story: survey stop path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: affirm
+  - action: health_form
+  - active_loop: form{"name":"health_form"}
+  - intent: out_of_scope
+  - action: utter_ask_continue
+  - intent: deny
+  - action: action_deactivate_form
+  - active_loop: form{"name":null}
+  - action: utter_goodbye
+
+- story: survey deny path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: deny
+  - action: utter_goodbye
+
+- story: survey stop path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: affirm
+  - action: health_form
+  - active_loop: form{"name":"health_form"}
+  - intent: out_of_scope
+  - action: utter_ask_continue
+  - intent: affirm
+  - action: health_form
+  - active_loop: form{"name":null}
+  - action: utter_slots_values
+
+- story: survey health question path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: affirm
+  - action: health_form
+  - active_loop: form{"name":"health_form"}
+  - intent: ask_about_exercise
+  - action: utter_ask_confirm_exercise
+  - action: health_form
+  - active_loop: form{"name":null}
+  - intent: goodbye
+  - action: utter_goodbye
+
+- story: ask a stress question 
+  steps:
+  - intent: ask_stress
+  - action: utter_stress
+
+- story: ask a health question 
+  steps:
+  - intent: ask_healthy
+  - action: utter_healthy
+
+- story: ask a health question 
+  steps:
+  - intent: ask_about_exercise
+  - action: utter_exercise
