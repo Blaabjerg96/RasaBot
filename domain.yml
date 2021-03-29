@@ -15,7 +15,7 @@ intents:
 
   
 slots:
-  confrim_exercise:
+  confirmm_exercise:
     type: unfeaturized
   exercise:
     type: unfeaturized
@@ -82,7 +82,7 @@ responses:
 
   utter_slots_values:
   - text: "This is my estimation of your wellness check: \n
-            - Exercised?: {confrim_exercise} \n
+            - Exercised?: {confirm_exercise} \n
             - Type of exercise: {exercise} \n
             - Sleep: {sleep} \n
             - Stuck to a healthy diet?: {diet}\n
@@ -98,7 +98,7 @@ actions:
  - health_form
 
 forms:
-- health_form
+  - health_form
 
 session_config:
   session_expiration_time: 60
